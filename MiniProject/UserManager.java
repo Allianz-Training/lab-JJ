@@ -27,12 +27,13 @@ public class UserManager {
 		if (cart.isEmpty()) {
 			return "Your cart is empty.";
 		} else {
-			String outString = "{";
+			double sum = 0;
+			String outString = "";
 			for(Map.Entry<Product, Integer> set : cart.entrySet()) {
-				outString += set.getKey().name + " : " + set.getValue() + ",";
+				outString += set.getKey().name + " : " + set.getValue() + " | Total : " + set.getKey().price*set.getValue() + "\n";
+				sum += set.getKey().price*set.getValue();
 			}
-			outString =  outString.substring(0,outString.length()-1);
-			outString += "}";
+			outString += "Total : " + sum;
 			return outString;
 		}
 	}
@@ -45,14 +46,15 @@ public class UserManager {
 		cart.remove(p);
 	}
 	
-	public boolean deleteProductInCart(Integer i) {
+	public String deleteProductInCart(Integer i) {
 		for(Map.Entry<Product, Integer> set : cart.entrySet()) {
 			if(i == set.getKey().getID()) {
+				String item = set.getKey().toString();
 				cart.remove(set.getKey());
-				return true;
+				return item;
 			}
 		}
-		return false;
+		return null;
 	}
 
 }

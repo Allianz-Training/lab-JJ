@@ -5,6 +5,5 @@ public class Main {
 		SingletonState inst =  SingletonState.getState();
 		PageManager pm = new PageManager(inst);
 		pm.startProgram();
-		
 	}
 }

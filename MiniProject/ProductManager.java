@@ -19,7 +19,7 @@ public class ProductManager {
 	
 	public void showAll() {
 		for (Product product : products) {
-			System.out.println(" (" + product.getID() + ")" + product.name);
+			System.out.println(" (" + product.getID() + ")" + product.name + " | Price : " + product.price);
 		}
 	}
 	

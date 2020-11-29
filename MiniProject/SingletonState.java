@@ -1,6 +1,5 @@
 package miniProject;
 
-import java.util.ArrayList;
 import miniProject.StateName.PageName;
 import miniProject.StateName.UserType;
 
@@ -11,7 +10,7 @@ public class SingletonState {
 	public PageName currentPage = PageName.LOGIN_PAGE;
 	public static ProductManager productManager;
 	
-	public static SingletonState getState() {
+	public final static SingletonState getState() {
 		if (SingletonState.instance == null) {
 			SingletonState.instance = new SingletonState();
 			productManager = new ProductManager();
@@ -19,7 +18,7 @@ public class SingletonState {
 		return instance;
 	}
 	
-	public ProductManager getProductManager() {
+	public final ProductManager getProductManager() {
 		return productManager;
 	}
 	
