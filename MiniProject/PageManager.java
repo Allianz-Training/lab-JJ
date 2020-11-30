@@ -27,7 +27,7 @@ public class PageManager {
 		page = PageName.LOGIN_PAGE;
 		System.out.println("What do you want to do?\n 1:Buy item(User)\n 2:Manage item(Admin)\n 3:Exit");
 		int choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		if (choice == 1) {
 			user.setType(UserType.USER);
 			mainUserPage(user);
@@ -54,7 +54,7 @@ public class PageManager {
 		System.out.println(" 2:Watch products in cart");
 		System.out.println(" 3:Logout");
 		choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		if (choice == 1) {
 			addToCartPage(usr);
 		} else if (choice == 2) {
@@ -78,7 +78,7 @@ public class PageManager {
 		System.out.println(" 2:Remove Product");
 		System.out.println(" 3:Logout");
 		choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		if (choice == 1) {
 			addProductToList();
 		} else if (choice == 2) {
@@ -103,7 +103,7 @@ public class PageManager {
 		System.out.println(" 2:Check out");
 		System.out.println(" 3:Back");
 		int choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		if (choice == 1) {
 			removeFromCartPage();
 		} else if (choice == 2) {
@@ -127,7 +127,7 @@ public class PageManager {
 		boolean foundedProduct = false;
 		boolean foundedinCart = false;
 		int choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		for (Product product : inst.getProductManager().products) {
 			if (choice == product.getID()) {
 				for (Map.Entry<Product, Integer> set : user.cart.entrySet()) {
@@ -157,7 +157,7 @@ public class PageManager {
 			System.out.println(" " + set.getKey().toString());
 		}
 		int choice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		String removed = user.deleteProductInCart(choice);
 		if (removed == null) {
 			System.out.println("Not has this product in Cart!");
@@ -170,24 +170,21 @@ public class PageManager {
 	public void checkOutPage(String bill) {
 		System.out.println("Please add your address for shipping : ");
 		Scanner addrScanner = new Scanner(System.in);
-		if (addrScanner.hasNextLine()) {
-			String addr = addrScanner.nextLine();
-			try {
-				SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-				Date date = new Date(System.currentTimeMillis());
-				String fileName = "Receipt_" + formatter.format(date) + ".txt";
-				FileWriter myWriter = new FileWriter(fileName);
-				myWriter.write(bill + addr);
-				myWriter.close();
-				System.out.println("Successfully saved the receipt.");
-			} catch (IOException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
-			user.cart.clear();
-			addrScanner.close();
-			mainUserPage(user);
+		String addr = addrScanner.nextLine();
+		try {
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+			Date date = new Date(System.currentTimeMillis());
+			String fileName = "Receipt_" + formatter.format(date) + ".txt";
+			FileWriter myWriter = new FileWriter(fileName);
+			myWriter.write(bill + addr);
+			myWriter.close();
+			System.out.println("Successfully saved the receipt.");
+		} catch (IOException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
 		}
+		user.cart.clear();
+		mainUserPage(user);
 	}
 
 	public void addProductToList() {
@@ -196,7 +193,7 @@ public class PageManager {
 		String productName = scanner.next();
 		System.out.println("Please enter price : ");
 		int productPrice = scanner.nextInt();
-		scanner.nextLine();
+		 
 		Product newProduct = new Product(productName, productPrice);
 		inst.productManager.addProduct(newProduct);
 		System.out.println("Add " + productName + " to Productlist!");
@@ -215,7 +212,7 @@ public class PageManager {
 		inst.getProductManager().showAll();
 		System.out.println("Please fill product id that you want to remove from list?");
 		int idProductRemove = scanner.nextInt();
-		scanner.nextLine();
+		 
 		inst.productManager.removeProductbyID(idProductRemove);
 		System.out.println("Product List");
 		for (Product product : inst.getProductManager().products) {
