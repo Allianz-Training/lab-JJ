@@ -1,0 +1,72 @@
+Class : Customer
+
+Property
+- id
+- profilePic
+- name
+- address
+- paymentMethod
+- bill
+
+Action
+- ChangeName(newName)
+- ChangePic(newProfileUrl)
+- AddAddress(newAddress)
+- RemoveAddress(AddressId)
+- AddPaymentMethod(newPayment)
+- RemovePaymentMethod(PaymentId)
+- AddBill(newBill)
+- ReceivedBill(BillId)
+
+-----------------------------------------
+
+Class : Bill
+
+Property
+- id
+- customerId
+- status
+- productList
+- orderDate
+- receivedDate
+- totalCost
+- usedPayment
+- promotionCode
+- senderAddress
+- receiverAddress
+
+Action
+- AddProduct(productId)
+- Discount()
+- ConfirmOrder()
+- Paid(paymentMethodId)
+- Received()
+
+-------------------------------------------
+
+Class : PaymentMethod
+
+Property
+- id
+- type
+- subId // binding with type for link to other platform class
+- status
+
+Action
+- CheckValid()
+
+--------------------------------------------
+
+Class : Products
+
+Property
+- id
+- name
+- price
+- description
+- pictures
+- saleEndDate
+- SalePrice
+
+Action
+- startSale(dueDate,salePrice)
