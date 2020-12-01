@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ex1P1(arr){
+            return arr.map(i => i*2)
+        }
+        function ex1P2(arr){
+            return arr.map(i => String(i))
+        }
+        function ex1P3(arr){
+            return arr.map(i => typeof(i))
+        }
+        function ex1P4(arr){
+            return arr.map(i => i.toUpperCase())
+        }
+        function ex1P5(arr){
+            return arr.map(i => i.name)
+        }
+        function ex1P6(arr){
+            return arr.map(i => i.age)
+        }
+        function ex1P7(arr){
+            return arr.map(i => i.name + " " + i.surname)
+        }
+        function ex1P8(arr){
+            return arr.map(i => (i % 2) ? 'odd':'even')
+        }
+        function ex1P9(arr){
+            return arr.map(i => i<0 ? i*-1:i)
+        }
+        function ex1P10(arr){
+            return arr.map(i => i.toFixed(2).toString())
+        }
+
+        function convertmili( mSeconds )
+        {
+            var checkYear = Math.floor(mSeconds / 31536000000);
+            return checkYear;
+        }
+        function ex1P11(arr){
+            return arr.map(function(i){
+                let newObj = {name: i.name,birth: i.birth, age: convertmili(Date.now() - 33536000000 -  (new Date(i.birth).getTime()))}
+                return newObj
+            }) 
+        }
+
+        function formatDate(d){
+            let myDate = new Date(d)
+            let dateArr = myDate.toDateString().split(' ')
+            return dateArr[2] + " " + dateArr[1] + " " + dateArr[3]
+        }
+        function ex1P12(arr){
+            return arr.map(function(i){
+                let str = "<tr> <td>" + i.name + "</td> <td>" + formatDate(i.birth) + "</td> </tr>"
+                return str
+            }) 
+        }
+        
+        // console.log("#1.1: ",ex1P1([1,2,30,400]))
+        // console.log("#1.2: ",ex1P2([1,2,3,4]))
+        // console.log("#1.3: ",ex1P3([1,"1",2,{}]))
+        // console.log("#1.4: ",ex1P4(["apple","banana","orange"]))
+        // console.log("#1.5: ",ex1P5([{name : "apple", age : 14},{name : "banana", age :18},{name: "watermelon",age : 32}]))
+        // console.log("#1.6: ",ex1P6([{name : "apple", age : 14},{name : "banana", age :18},{name: "watermelon",age : 32}]))
+        // console.log("#1.7: ",ex1P7([{name : "apple", surname : "London"},{name : "banana", surname :"Bangkok"},{name: "watermelon",surname : "Singapore"}]))
+        // console.log("#1.8: ",ex1P8([1,3,4,5,6,7,8]))
+        // console.log("#1.9: ",ex1P9([1,-3,2,8,-4,5]))
+        // console.log("#1.10: ",ex1P10([100,200.25,300.84,400.3]))
+        // console.log("#1.11: ",ex1P11([{name:"apple",birth:"2000-01-01"},{name:"banana",birth:"1990-10-01"},{name:"watermelon",birth:"1985-12-01"}]))
+        // console.log("#1.12: ",ex1P12([{name:"apple",birth:"2000-01-01"},{name:"banana",birth:"1990-10-01"},{name:"watermelon",birth:"1985-12-01"}]))
+        
+    </script>
+</body>
+</html>
