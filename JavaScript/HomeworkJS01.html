@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let input = prompt("Enter Number")
+
+        function draw1(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                str+="*";
+            }
+            return str;
+        }
+
+        function draw2(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                for(let j = 0; j<n;j++){
+                    str+="*";
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw3(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                for(let j = 1; j<=n;j++){
+                    str += j;
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw4(n){
+            let str = "";
+            for(let i = 1; i<=n;i++){
+                for(let j = 1; j<=n;j++){
+                    str += i;
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw5(n){
+            let str = "";
+            for(let i = n; i>0;i--){
+                for(let j = 1; j<=n;j++){
+                    str += i;
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw6(n){
+            let count = 0;
+            let str = "";
+            for(let i = n; i>0;i--){
+                for(let j = 1; j<=n;j++){
+                    str += ++count;
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw7(n){
+            let count = n*n;
+            let str = "";
+            for(let i = n; i>0;i--){
+                for(let j = 1; j<=n;j++){
+                    str += count--;
+                }
+                str+="\n";
+            }
+            return str;
+        }
+
+        function draw8(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                str+= i*2 + "\n";
+            }
+            return str;
+        }
+
+        function draw9(n){
+            let str = "";
+            for(let i = 1; i<=n;i++){
+                str+= i*2 + "\n";
+            }
+            return str;
+        }
+        
+        function draw10(n){
+            let str = "";
+            for(let i = 1; i<=n;i++){
+                for(let j = 1;j<=n;j++){
+                    str += i*j
+                }
+                str += "\n"
+            }
+            return str;
+        }
+
+        function draw11(n){
+            let str = "";
+            for(let i = 1; i<=n;i++){
+                for(let j = 1;j<=n;j++){
+                    if(i==j){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;    
+        }
+        
+        function draw12(n){
+            let str = "";
+            for(let i = n; i>0;i--){
+                for(let j = 1;j<=n;j++){
+                    if(i==j){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;    
+        }
+        
+        function draw13(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                for(let j = 0;j<n;j++){
+                    if(j>i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;    
+        }
+        
+        function draw14(n){
+            let str = "";
+            for(let i = 0; i<n;i++){
+                for(let j = 0;j<n;j++){
+                    if(j>n-i - 1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;    
+        }
+
+        function draw15(n){
+            let str = ""
+            str += draw13(n)
+            for(let i = 0; i<n;i++){
+                if( i == 0)continue;
+                for(let j = 0;j<n;j++){
+                    if(j>n-i - 1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str
+        }
+		
+		function draw17(n){
+            let str = ""
+            for(let i = 0; i<n;i++){
+                for(let j = 0;j<n;j++){
+                    if(j<n-i - 1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str
+        }
+
+        function draw18(n){
+            let str = ""
+            for(let i = 0; i<n;i++){
+                for(let j = 0;j<n;j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str
+        }
+
+        function draw19(n){
+            let str = "";
+            str += draw17(n);
+            for(let i = 0; i<n;i++){
+                if(i==0)continue;
+                for(let j = 0;j<n;j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;
+        }
+
+        function draw20(n){
+            let str = "";
+            let counter = 0;
+             for(let i = 0; i<n;i++){
+                for(let j = 0;j<n;j++){
+                    if(j<n-i - 1){
+                        str += "-"
+                    }else{
+                        str += ++counter
+                    }
+                }
+                str += "\n"
+            }
+            for(let i = 0; i<n;i++){
+                if(i==0)continue;
+                for(let j = 0;j<n;j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += ++counter
+                    }
+                }
+                str += "\n"
+            }
+            return str;
+        }
+
+        function draw21(n){
+            let str = ""
+            for(let i = 0;i<n;i++){
+                for(let j = 0;j<n; j++){
+                    if(j<n-i-1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                for(let j = 1;j<n; j++){
+                    if(j>i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;
+        }
+
+        function draw22(n){
+            let str = ""
+            for(let i = 0;i<n;i++){
+                for(let j = 0;j<n; j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                for(let j = 1;j<n; j++){
+                    if(j>n-i - 1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            return str;
+        }
+        function draw23(n){
+            let str = ""
+            str += draw21(n)
+            for(let i = 0;i<n;i++){
+                if(i == 0) continue;
+                for(let j = 0;j<n; j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                for(let j = 1;j<n; j++){
+                    if(j>n-i - 1){
+                        str += "-"
+                    }else{
+                        str += "*"
+                    }
+                }
+                str += "\n"
+            }
+            // str += draw22(m)
+            return str;
+        }
+        function draw24(n){
+            let str = ""
+            let count = 0
+            for(let i = 0;i<n;i++){
+                for(let j = 0;j<n; j++){
+                    if(j<n-i-1){
+                        str += "-"
+                    }else{
+                        str += ++count
+                    }
+                }
+                for(let j = 1;j<n; j++){
+                    if(j>i){
+                        str += "-"
+                    }else{
+                        str += ++count
+                    }
+                }
+                str += "\n"
+            }
+            for(let i = 0;i<n;i++){
+                if(i == 0) continue;
+                for(let j = 0;j<n; j++){
+                    if(j<i){
+                        str += "-"
+                    }else{
+                        str += ++count
+                    }
+                }
+                for(let j = 1;j<n; j++){
+                    if(j>n-i - 1){
+                        str += "-"
+                    }else{
+                        str += ++count
+                    }
+                }
+                str += "\n"
+            }
+            // str += draw22(m)
+            return str;
+        }
+        
+
+        // alert(draw14(input));
+    </script>
+    
+</body>
+</html>
