@@ -1,0 +1,54 @@
+#1 
+SELECT * FROM Sailors
+
+#2 
+SELECT sname 
+	FROM Sailors 
+	INNER JOIN Reserves
+	ON Sailors.sid = Reserves.sid
+	WHERE Reserves.bid = 103  
+
+#3 
+SELECT sid
+	FROM Reserves
+	INNER JOIN Boats
+	ON Reserves.bid = Boats.bid
+	WHERE Lower(Boats.color) = "red"
+// Use Distinct to delete all Duplicated ID
+
+#3(ALTERNATE)
+SELECT R.sid
+FROM Reserves R, Boats B
+WHERE R.bid = B.bid AND B.color = "Red"
+
+#4 
+SELECT S.sname
+	FROM Sailors as S
+	INNER JOIN Reserves as R
+	ON S.sid = R.sid
+	INNER JOIN Boats as B
+	ON R.bid = B.bid
+	WHERE Lower(B.color) = "red"
+
+#4(ALTERNATE)
+SELECT S.name
+FROM Sailors S, Reserves R, Boats B
+WHERE R.sid = S.sid AND R.bid = B.bid AND B.color = "Red"
+
+
+#5 
+SELECT B.color
+	FROM Boats as B
+	INNER JOIN Reserves as R
+	ON B.bid = R.bid
+	INNER JOIN Sailors as S
+	ON R.sid = S.sid 
+	WHERE S.sname = "Lubber"
+
+#6
+SELECT S.sname
+	FROM Sailors as S
+	WHERE S.sid IN (
+		SELECT DISTINCT R.sid
+		FROM Reserves as R
+	)
