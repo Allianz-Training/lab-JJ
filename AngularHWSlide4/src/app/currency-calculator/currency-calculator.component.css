@@ -1,0 +1,11 @@
+.amountbox {
+  text-align: end;
+  width: 180px;
+  margin-right: 5px;
+}
+
+.typebox {
+  text-align: center;
+  width: 70px;
+  text-transform: uppercase;
+}
