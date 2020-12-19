@@ -1,0 +1,17 @@
+<h2>Home Component</h2>
+<div class="container border">
+  <div class="row">
+    <b>Title : </b>
+    <span>&nbsp;{{ title }}</span>
+  </div>
+  <div class="row">
+    <input [(ngModel)]="title" placeholder="Title Input" />
+  </div>
+  <div class="row mt-3">
+    <b>Counter : </b>
+    <span>&nbsp;{{ counter }}</span>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary" (click)="addCount()">Add</button>
+  </div>
+</div>

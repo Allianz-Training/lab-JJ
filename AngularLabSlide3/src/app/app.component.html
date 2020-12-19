@@ -1,0 +1,41 @@
+<!-- <div>
+  <h2>Product List</h2>
+  <app-product-list #productList></app-product-list>
+</div> -->
+
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-main-content></app-main-content> -->
+
+<div>.... menu bar ...</div>
+
+<div>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li>
+      <a [routerLink]="['/login']">Login</a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']">Products</a>
+    </li>
+    <li>
+      <a [routerLink]="['/products/222']">Products Id 222</a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div>.. footer ..</div>
+<h3>Raised Buttons</h3>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-raised-button disabled>Disabled</button>
+  <a mat-raised-button routerLink=".">Link</a>
+</div>
