@@ -1,0 +1,36 @@
+* {
+  font-family: sans-serif;
+}
+
+.bg {
+  background: url(https://www.swiftviews.com/auth-background.d98d7ff313fe2ec07d45.png);
+  height: fit-content;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(50, 50, 50, 0.8);
+  box-shadow: 0 1px 6px 0 rgba(50, 50, 50, 0.8);
+  z-index: 1;
+}
+
+.text-head {
+  font-size: larger;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.text-content {
+  line-height: 22px;
+  color: white;
+}
+
+.my-btn {
+  color: #e1323d;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  margin: 20px 0 60px 0;
+}
+
+.overlap {
+  width: 75%;
+  margin-top: -27px;
+}

@@ -1,0 +1,8 @@
+<div class="m-1">
+  <div class="my-container">
+    <div class="box btn" [class.selected]="isSelected" (click)="select()">
+      <span>{{ task.name }}</span>
+    </div>
+    <button class="btn btn-danger ml-2" (click)="delete()">Delete</button>
+  </div>
+</div>

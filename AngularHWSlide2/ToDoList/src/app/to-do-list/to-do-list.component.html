@@ -1,0 +1,24 @@
+<div class="half-display">
+  <div>
+    <h2>To Do List</h2>
+    <div class="mb-3 w-100 border">
+      <app-task
+        *ngFor="let task of tasks"
+        [task]="task"
+        (OnSelected)="selectedTask($event)"
+        (OnDelete)="deleteTask($event)"
+      >
+      </app-task>
+    </div>
+    <app-task-adder (OnAddClick)="addTask($event)"></app-task-adder>
+  </div>
+  <div>
+    <h2>&nbsp;</h2>
+    <div class="ml-3">
+      <app-task-detail
+        *ngIf="currentTask != null"
+        [task]="currentTask"
+      ></app-task-detail>
+    </div>
+  </div>
+</div>

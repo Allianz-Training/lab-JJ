@@ -1,0 +1,23 @@
+<div class="p-3 w-100 border">
+  <h4>Add Task</h4>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label class="mr-2">Name</label
+      ><span style="color: red" *ngIf="form.get('name').errors?.required"
+        >*</span
+      >
+      <input class="form-control" type="text" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label class="mr-2">Description</label>
+      <input class="form-control" type="text" formControlName="description" />
+    </div>
+    <button
+      [disabled]="form.invalid"
+      class="btn btn-primary w-100"
+      (click)="addClick()"
+    >
+      Add
+    </button>
+  </form>
+</div>

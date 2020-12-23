@@ -1,0 +1,17 @@
+.bg {
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  padding-top: 20vh;
+  padding-bottom: 16vh;
+  border-top: 2px solid rgb(196, 196, 196);
+}
+
+.my-box {
+  width: 45%;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.red {
+  color: red;
+}
