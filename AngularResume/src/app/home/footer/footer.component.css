@@ -1,0 +1,30 @@
+.foot {
+  position: sticky;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background: #e7faff;
+  color: black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot > i {
+  transition: all 300ms;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.foot > i:hover {
+  font-size: larger;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .foot {
+    font-size: 10px;
+  }
+}

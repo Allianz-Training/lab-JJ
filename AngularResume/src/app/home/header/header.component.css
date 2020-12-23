@@ -1,0 +1,65 @@
+.bg {
+  background-color: #ffd1bd;
+  height: 150px;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #e7faff;
+  margin-bottom: 20px;
+}
+
+.head-name {
+  font-size: 50px;
+  color: white;
+  animation: fading 3s infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+@keyframes fading {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fontInit {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head-name {
+    font-size: 30px;
+  }
+  .navbar {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .head-name {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .head-name {
+    font-size: 70px;
+  }
+}

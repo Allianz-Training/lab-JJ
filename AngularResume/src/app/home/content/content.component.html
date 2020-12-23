@@ -1,0 +1,55 @@
+<div class="content-container">
+  <div class="content-blog" id="about">
+    <h3 [routerLink]="['/about']"><i class="fas fa-male"></i> About Me</h3>
+    <ul *ngIf="contentSelector == 1 || contentSelector == 0">
+      <li>Name : {{ name }}</li>
+      <li>Nickname : {{ nickname }}</li>
+      <li>Birthday : {{ birth }}</li>
+    </ul>
+    <h3 [routerLink]="['/address']">
+      <i class="fas fa-map-marker-alt"></i> Address
+    </h3>
+    <p
+      *ngIf="contentSelector == 2 || contentSelector == 0"
+      style="font-size: 12px"
+    >
+      {{ address }}
+    </p>
+  </div>
+  <div class="content-blog">
+    <h3 [routerLink]="['/skill']">
+      <i class="fas fa-clipboard-list"></i> Skills
+    </h3>
+    <ul *ngIf="contentSelector == 3 || contentSelector == 0">
+      <li *ngFor="let s of skills">{{ s }}</li>
+    </ul>
+  </div>
+  <div class="content-blog" id="edu">
+    <h3 [routerLink]="['/education']">
+      <i class="fas fa-graduation-cap"></i> Education
+    </h3>
+    <ul *ngIf="contentSelector == 4 || contentSelector == 0">
+      <li *ngFor="let e of educations">
+        <b>{{ e.from }} - {{ e.end }}</b
+        ><br />
+        <i>{{ e.place }}</i
+        ><br />
+        <label>{{ e.special }}</label>
+      </li>
+    </ul>
+  </div>
+  <div class="content-blog" id="exp">
+    <h3 [routerLink]="['/experience']">
+      <i class="fas fa-flask"></i> Experience
+    </h3>
+    <ul *ngIf="contentSelector == 5 || contentSelector == 0" style="width: 80%">
+      <li *ngFor="let e of experiences">
+        <b>{{ e.from }} - {{ e.end }}</b
+        ><br />
+        <i>{{ e.place }}</i
+        ><br />
+        <label>{{ e.special }}</label>
+      </li>
+    </ul>
+  </div>
+</div>
