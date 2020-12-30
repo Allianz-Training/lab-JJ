@@ -1,3 +1,4 @@
+<div class="blur-bg">&nbsp;</div>
 <div class="all-container">
   <div class="half-divider">
     <div class="left-bg logo">
@@ -6,9 +7,11 @@
       <div></div>
     </div>
     <div class="right-bg">
-      <div class="close-btn"><i class="btn fas fa-times"></i></div>
+      <div class="close-btn">
+        <i class="btn fas fa-times" (click)="closeClick()"></i>
+      </div>
       <div class="right-content">
-        <div class="right-head mb-3">Welcome</div>
+        <div class="right-head">Welcome</div>
         <div class="form-container mb-3">
           <div class="form-divider mb-2">
             <div class="col-form-label">Email</div>
