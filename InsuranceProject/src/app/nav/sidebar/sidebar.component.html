@@ -1,0 +1,39 @@
+<div class="side-bg">
+  <div class="side-container">
+    <div
+      class="side-item"
+      [class.selected]="pService.getPage() == 1"
+      [routerLink]="['/packages']"
+    >
+      Packages
+    </div>
+    <div
+      class="side-item"
+      [class.selected]="pService.getPage() == 2"
+      [routerLink]="['/qa']"
+    >
+      Q&A
+    </div>
+    <div
+      class="side-item"
+      [class.selected]="pService.getPage() == 3"
+      [routerLink]="['/contact']"
+    >
+      Contact Us
+    </div>
+    <div
+      class="side-item"
+      [class.selected]="pService.getPage() == 4"
+      [routerLink]="['/history']"
+    >
+      History
+    </div>
+    <div
+      class="side-item"
+      [class.selected]="pService.getPage() == 5"
+      [routerLink]="['/claim']"
+    >
+      Claim Form
+    </div>
+  </div>
+</div>

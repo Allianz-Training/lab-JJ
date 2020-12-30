@@ -1,0 +1,9 @@
+.side-divider {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+.side-left {
+  min-width: 150px;
+}

@@ -1,0 +1,24 @@
+<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>
+
+<div class="top-background">
+  <div class="top-logo">
+    <a [routerLink]="['home']"> Sample Logo </a>
+  </div>
+  <div class="top-user">
+    <div *ngIf="isMember == true" id="member">
+      <button class="btn btn-secondary">
+        <i class="fas fa-user mr-2"></i>
+        Name
+      </button>
+    </div>
+    <div *ngIf="isMember == false" id="notMember">
+      <button class="btn btn-secondary mr-2">Sign up</button>
+      <button class="btn btn-secondary">Login</button>
+    </div>
+  </div>
+</div>

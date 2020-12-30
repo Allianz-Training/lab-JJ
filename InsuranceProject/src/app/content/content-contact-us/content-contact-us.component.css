@@ -1,0 +1,19 @@
+.content-container {
+  margin: 0px 30px;
+}
+
+.head-content {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.content-set {
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 50vh;
+}
+
+.content-set > div > i {
+  font-size: 30px;
+}

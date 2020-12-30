@@ -1,0 +1,27 @@
+.question-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+.head-content {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.question-topic {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(182, 182, 182);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: start;
+}
+
+.text-question {
+  font-weight: 600;
+}
+
+.text-answer {
+}

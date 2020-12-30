@@ -1,0 +1,13 @@
+<div>
+  <!-- <app-login></app-login> -->
+  <app-topbar></app-topbar>
+  <div class="side-divider">
+    <div class="side-left">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+  <app-footbar></app-footbar>
+</div>

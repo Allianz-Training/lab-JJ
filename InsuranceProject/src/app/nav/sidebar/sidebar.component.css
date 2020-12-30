@@ -1,0 +1,39 @@
+.side-bg {
+  height: 90vh;
+  background-color: rgb(218, 218, 218);
+}
+
+.side-container {
+  /* height: 85vh; */
+  display: grid;
+  grid-column: 1;
+}
+
+.side-item {
+  /* margin-top: 10px; */
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0px #ccc;
+  margin: 5px 10px;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+.side-item:hover {
+  background-color: black;
+  color: white;
+}
+
+.selected {
+  background-color: rgb(88, 88, 88);
+  color: white;
+}
+
+.side-item:focus,
+.selected:focus {
+  outline: none;
+  box-shadow: none;
+}

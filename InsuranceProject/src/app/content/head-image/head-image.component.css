@@ -1,0 +1,12 @@
+.head-bg {
+  background-color: black;
+  /* height: 15vh; */
+}
+
+.head-text {
+  padding: 20px 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
