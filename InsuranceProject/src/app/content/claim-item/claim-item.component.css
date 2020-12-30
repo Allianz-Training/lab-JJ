@@ -1,0 +1,7 @@
+.claim-item {
+  background-color: rgb(197, 197, 197);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  padding: 10px;
+  border-radius: 15px;
+}

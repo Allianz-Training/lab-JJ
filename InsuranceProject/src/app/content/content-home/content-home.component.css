@@ -1,0 +1,19 @@
+.bg-container {
+  background-color: rgb(201, 201, 201);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  min-height: 65vh;
+}
+
+.logo {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.content {
+  font-size: 40px;
+  line-height: 40px;
+}

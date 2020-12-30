@@ -18,7 +18,7 @@
     </div>
     <div *ngIf="isMember == false" id="notMember">
       <button class="btn btn-secondary mr-2">Sign up</button>
-      <button class="btn btn-secondary">Login</button>
+      <button class="btn btn-secondary" (click)="loginClick()">Login</button>
     </div>
   </div>
 </div>

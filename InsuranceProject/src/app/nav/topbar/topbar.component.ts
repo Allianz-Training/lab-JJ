@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageControllerService } from 'src/app/page-controller.service';
 
 @Component({
   selector: 'app-topbar',
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class TopbarComponent implements OnInit {
   isMember: boolean;
 
-  constructor() {
+  constructor(private pageService: PageControllerService) {
     this.isMember = false;
   }
 
   ngOnInit(): void {}
+
+  loginClick() {
+    this.pageService.isLoginPage
+      ? (this.pageService.isLoginPage = false)
+      : (this.pageService.isLoginPage = true);
+  }
 }

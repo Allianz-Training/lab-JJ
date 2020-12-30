@@ -5,8 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class PageControllerService {
   index: number;
+  isLoginPage: boolean;
   constructor() {
     this.index = 0;
+    this.isLoginPage = false;
   }
 
   setPage(idx: number) {

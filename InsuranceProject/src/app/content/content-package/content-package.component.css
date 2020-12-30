@@ -9,9 +9,11 @@ ul {
 }
 
 .package-container {
-  height: 70vh;
+  margin: 10px;
+  height: 71vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
 .package-item {
@@ -20,7 +22,6 @@ ul {
   background-color: rgb(190, 190, 190);
   border-radius: 15px;
   padding: 20px;
-  margin: 10px;
 }
 
 .package-head {

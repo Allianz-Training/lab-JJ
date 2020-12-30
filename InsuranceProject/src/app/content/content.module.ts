@@ -9,6 +9,7 @@ import { ContentClaimFormComponent } from './content-claim-form/content-claim-fo
 import { NavModule } from '../nav/nav.module';
 import { ContentHomeComponent } from './content-home/content-home.component';
 import { ContentPackageDetailComponent } from './content-package-detail/content-package-detail.component';
+import { ClaimItemComponent } from './claim-item/claim-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ContentPackageDetailComponent } from './content-package-detail/content-
     ContentClaimFormComponent,
     ContentHomeComponent,
     ContentPackageDetailComponent,
+    ClaimItemComponent,
   ],
   imports: [CommonModule, NavModule],
   exports: [ContentPackageComponent],

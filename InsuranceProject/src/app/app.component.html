@@ -1,5 +1,7 @@
 <div>
-  <!-- <app-login></app-login> -->
+  <div [ngClass]="pageService.isLoginPage ? 'show' : 'hidden'">
+    <app-login></app-login>
+  </div>
   <app-topbar></app-topbar>
   <div class="side-divider">
     <div class="side-left">
