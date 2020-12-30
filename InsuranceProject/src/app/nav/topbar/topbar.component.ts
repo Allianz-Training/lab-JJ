@@ -10,7 +10,7 @@ export class TopbarComponent implements OnInit {
   isMember: boolean;
 
   constructor(private pageService: PageControllerService) {
-    this.isMember = false;
+    this.isMember = this.pageService.isMember;
   }
 
   ngOnInit(): void {}
@@ -19,5 +19,10 @@ export class TopbarComponent implements OnInit {
     this.pageService.isLoginPage
       ? (this.pageService.isLoginPage = false)
       : (this.pageService.isLoginPage = true);
+  }
+  signUpClick() {
+    this.pageService.isSignUpPage
+      ? (this.pageService.isSignUpPage = false)
+      : (this.pageService.isSignUpPage = true);
   }
 }

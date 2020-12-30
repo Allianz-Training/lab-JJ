@@ -16,6 +16,7 @@
   height: 100%;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  margin-top: -15px;
 }
 
 .half-divider {

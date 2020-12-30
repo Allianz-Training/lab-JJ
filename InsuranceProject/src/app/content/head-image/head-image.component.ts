@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PageControllerService } from 'src/app/page-controller.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { PageControllerService } from 'src/app/page-controller.service';
   styleUrls: ['./head-image.component.css'],
 })
 export class HeadImageComponent implements OnInit {
+  @Input()
+  headTitle: string;
+
   index: number;
   constructor(private pageService: PageControllerService) {}
 

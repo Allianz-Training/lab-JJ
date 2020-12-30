@@ -9,7 +9,9 @@ import { ContentClaimFormComponent } from './content-claim-form/content-claim-fo
 import { NavModule } from '../nav/nav.module';
 import { ContentHomeComponent } from './content-home/content-home.component';
 import { ContentPackageDetailComponent } from './content-package-detail/content-package-detail.component';
-import { ClaimItemComponent } from './claim-item/claim-item.component';
+import { ClaimItemComponent } from './content-claim-form/claim-item/claim-item.component';
+import { ContentPackageItemComponent } from './content-package-item/content-package-item.component';
+import { TopicComponent } from './content-qa/topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ClaimItemComponent } from './claim-item/claim-item.component';
     ContentHomeComponent,
     ContentPackageDetailComponent,
     ClaimItemComponent,
+    ContentPackageItemComponent,
+    TopicComponent,
   ],
   imports: [CommonModule, NavModule],
   exports: [ContentPackageComponent],

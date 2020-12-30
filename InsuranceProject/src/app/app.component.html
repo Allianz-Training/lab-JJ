@@ -2,7 +2,11 @@
   <div [ngClass]="pageService.isLoginPage ? 'show' : 'hidden'">
     <app-login></app-login>
   </div>
+  <div [ngClass]="pageService.isSignUpPage ? 'show' : 'hidden'">
+    <app-register></app-register>
+  </div>
   <app-topbar></app-topbar>
+  <div class="top-space"></div>
   <div class="side-divider">
     <div class="side-left">
       <app-sidebar></app-sidebar>
