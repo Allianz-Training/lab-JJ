@@ -1,6 +1,7 @@
 <div>
   <app-head-image [headTitle]="'Claim Form'"></app-head-image>
-  <form action="">
+  <form>
+    <!-- [formGroup]="myForm" -->
     <div class="half box-border">
       <div class="space" #left>
         <div class="half13">
@@ -21,14 +22,23 @@
         </div>
         <div class="half13">
           <div>Claim Picture</div>
-          <button class="btn btn-secondary">Choose</button>
+          <input
+            type="file"
+            accept="image/*"
+            (change)="showPreview($event)"
+            #imageInput
+          />
         </div>
         <!-- <div style="justify-self: center"> -->
         <button type="submit" class="btn btn-secondary w-100">Submit</button>
         <!-- </div> -->
       </div>
       <div #right>
-        <div class="img-box"></div>
+        <div class="img-box">
+          <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+            <img [src]="imageURL" [alt]="form.value.name" />
+          </div>
+        </div>
       </div>
     </div>
   </form>

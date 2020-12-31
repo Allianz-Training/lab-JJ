@@ -14,6 +14,7 @@ import { ContentPackageItemComponent } from './content-package-item/content-pack
 import { TopicComponent } from './content-qa/topic/topic.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ContentPaymentComponent } from './content-payment/content-payment.component';
+import { ImageService } from '../image.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContentPaymentComponent } from './content-payment/content-payment.compo
     ContentPaymentComponent,
   ],
   imports: [CommonModule, NavModule, AppRoutingModule],
+  providers: [ImageService],
   exports: [ContentPackageComponent],
 })
 export class ContentModule {}
