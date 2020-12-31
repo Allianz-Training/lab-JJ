@@ -39,59 +39,65 @@
         </div>
       </div>
       <div class="detail-container right-box">
-        <form action="/checkout" method="post" id="checkout">
-          <div id="token_errors"></div>
+        <div class="right-content">
+          <form action="/checkout" method="post" id="checkout">
+            <div id="token_errors"></div>
 
-          <input type="hidden" name="omise_token" />
+            <input type="hidden" name="omise_token" />
 
-          <div class="mb-2">
-            <div class="mb-1">Name</div>
-            <input type="text" class="form-control" data-omise="holder_name" />
-          </div>
-          <div class="mb-2">
-            <div class="mb-1">Number</div>
-            <input type="text" class="form-control" data-omise="number" />
-          </div>
-          <div class="half13">
-            <div>
-              <div class="mb-1">Date</div>
-              <div class="row m-0">
-                <input
-                  type="text"
-                  class="form-control"
-                  data-omise="expiration_month"
-                  style="width: 50px"
-                  size="4"
-                />
-                <div
-                  style="font-size: 30px; align-self: center"
-                  class="ml-2 mr-2"
-                >
-                  /
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  style="width: 50px"
-                  data-omise="expiration_year"
-                  size="8"
-                />
-              </div>
+            <div class="mb-2">
+              <div class="mb-1">Name</div>
+              <input
+                type="text"
+                class="form-control"
+                data-omise="holder_name"
+              />
             </div>
-            <div>
+            <div class="mb-2">
+              <div class="mb-1">Number</div>
+              <input type="text" class="form-control" data-omise="number" />
+            </div>
+            <div class="half13">
               <div>
-                <div class="mb-1">Security Code</div>
-                <input
-                  type="text"
-                  class="form-control"
-                  style="width: 100px"
-                  data-omise="security_code"
-                  size="8"
-                />
+                <div class="mb-1">Date</div>
+                <div class="row m-0">
+                  <input
+                    type="text"
+                    class="form-control"
+                    data-omise="expiration_month"
+                    style="width: 50px"
+                    size="4"
+                  />
+                  <div
+                    style="font-size: 30px; align-self: center"
+                    class="ml-2 mr-2"
+                  >
+                    /
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    style="width: 50px"
+                    data-omise="expiration_year"
+                    size="8"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div class="mb-1">Security Code</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    style="width: 100px"
+                    data-omise="security_code"
+                    size="8"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </form>

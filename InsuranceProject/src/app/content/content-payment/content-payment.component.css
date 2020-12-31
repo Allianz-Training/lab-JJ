@@ -29,3 +29,13 @@
 .half-space {
   grid-gap: 20px;
 }
+
+.right-box {
+  display: flex;
+  height: 100%;
+}
+
+.right-content {
+  width: 100%;
+  align-self: center;
+}
