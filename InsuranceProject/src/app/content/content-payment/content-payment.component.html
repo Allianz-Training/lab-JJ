@@ -1,0 +1,104 @@
+<div>
+  <app-head-image [headTitle]="'Payment'"></app-head-image>
+</div>
+<div class="package-item">
+  <form action="">
+    <div class="half13 half-space">
+      <div class="detail-container left-box">
+        <h2>Payment Method</h2>
+        <div class="form-check mb-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio1"
+            value="option1"
+            checked
+          />
+          <label class="form-check-label" for="inlineRadio1">Airpay</label>
+        </div>
+        <div class="form-check mb-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio2"
+            value="option2"
+          />
+          <label class="form-check-label" for="inlineRadio2">Paypal</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio3"
+            value="option3"
+          />
+          <label class="form-check-label" for="inlineRadio3">Credit Card</label>
+        </div>
+      </div>
+      <div class="detail-container right-box">
+        <form action="/checkout" method="post" id="checkout">
+          <div id="token_errors"></div>
+
+          <input type="hidden" name="omise_token" />
+
+          <div class="mb-2">
+            <div class="mb-1">Name</div>
+            <input type="text" class="form-control" data-omise="holder_name" />
+          </div>
+          <div class="mb-2">
+            <div class="mb-1">Number</div>
+            <input type="text" class="form-control" data-omise="number" />
+          </div>
+          <div class="half13">
+            <div>
+              <div class="mb-1">Date</div>
+              <div class="row m-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  data-omise="expiration_month"
+                  style="width: 50px"
+                  size="4"
+                />
+                <div
+                  style="font-size: 30px; align-self: center"
+                  class="ml-2 mr-2"
+                >
+                  /
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  style="width: 50px"
+                  data-omise="expiration_year"
+                  size="8"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="mb-1">Security Code</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  style="width: 100px"
+                  data-omise="security_code"
+                  size="8"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+  <div class="half">
+    <div class="btn btn-secondary w-50" [routerLink]="['..']">Back</div>
+    <div class="btn btn-secondary w-50 ml-auto" (click)="confirmClick()">
+      Confirm
+    </div>
+  </div>
+</div>

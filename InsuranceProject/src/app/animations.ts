@@ -105,4 +105,52 @@ export const slideInAnimation = trigger('routeAnimations', [
     ]),
     query(':enter', animateChild()),
   ]),
+  transition('* => HistoryPage', [
+    style({ position: 'relative' }),
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        width: '100%',
+      }),
+    ]),
+    query(':enter', [style({ opacity: 0 })]),
+    query(':leave', animateChild()),
+    group([
+      query(':leave', [animate('0.5s ease-out', style({ opacity: 0 }))]),
+      query(':enter', [animate('0.5s ease-out', style({ opacity: 1 }))]),
+    ]),
+    query(':enter', animateChild()),
+  ]),
+  transition('* => PackageDetailPage', [
+    style({ position: 'relative' }),
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        width: '100%',
+      }),
+    ]),
+    query(':enter', [style({ opacity: 0 })]),
+    query(':leave', animateChild()),
+    group([
+      query(':leave', [animate('0.5s ease-out', style({ opacity: 0 }))]),
+      query(':enter', [animate('0.5s ease-out', style({ opacity: 1 }))]),
+    ]),
+    query(':enter', animateChild()),
+  ]),
+  transition('* => PaymentPage', [
+    style({ position: 'relative' }),
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        width: '100%',
+      }),
+    ]),
+    query(':enter', [style({ opacity: 0 })]),
+    query(':leave', animateChild()),
+    group([
+      query(':leave', [animate('0.5s ease-out', style({ opacity: 0 }))]),
+      query(':enter', [animate('0.5s ease-out', style({ opacity: 1 }))]),
+    ]),
+    query(':enter', animateChild()),
+  ]),
 ]);

@@ -1,1 +1,19 @@
-<p>content-package-detail works!</p>
+<div>
+  <app-head-image [headTitle]="'Package Detail'"></app-head-image>
+</div>
+<div class="package-item">
+  <div class="half">
+    <h1 class="m-0">Package Name</h1>
+    <div class="ml-auto mr-2">Cost : xxx</div>
+  </div>
+  <div class="half half-space">
+    <div class="detail-container">Package Description</div>
+    <div class="detail-container">Package Benefit</div>
+  </div>
+  <div class="half half-space">
+    <div class="btn btn-secondary w-50" [routerLink]="['/packages']">Back</div>
+    <div class="btn btn-secondary w-50 ml-auto" [routerLink]="['./payment']">
+      Buy
+    </div>
+  </div>
+</div>

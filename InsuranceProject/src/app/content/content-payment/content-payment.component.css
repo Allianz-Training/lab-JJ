@@ -1,6 +1,6 @@
 .package-item {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   background-color: rgb(190, 190, 190);
   border-radius: 15px;
   padding: 20px;
@@ -8,10 +8,16 @@
   min-height: 67vh;
   grid-gap: 10px;
 }
-
 .half {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.half13 {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .detail-container {

@@ -12,6 +12,8 @@ import { ContentPackageDetailComponent } from './content-package-detail/content-
 import { ClaimItemComponent } from './content-claim-form/claim-item/claim-item.component';
 import { ContentPackageItemComponent } from './content-package-item/content-package-item.component';
 import { TopicComponent } from './content-qa/topic/topic.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { ContentPaymentComponent } from './content-payment/content-payment.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,9 @@ import { TopicComponent } from './content-qa/topic/topic.component';
     ClaimItemComponent,
     ContentPackageItemComponent,
     TopicComponent,
+    ContentPaymentComponent,
   ],
-  imports: [CommonModule, NavModule],
+  imports: [CommonModule, NavModule, AppRoutingModule],
   exports: [ContentPackageComponent],
 })
 export class ContentModule {}
