@@ -14,3 +14,12 @@ body {
   outline: none;
   box-shadow: none;
 }
+
+.half {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.half13 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}

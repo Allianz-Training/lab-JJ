@@ -1,4 +1,35 @@
 <div>
   <app-head-image [headTitle]="'Claim Form'"></app-head-image>
-  <p>content-claim-form works!</p>
+  <form action="">
+    <div class="half box-border">
+      <div class="space" #left>
+        <div class="half13">
+          <div>Name</div>
+          <input type="text" />
+        </div>
+        <div class="half13">
+          <div>Tracking Number</div>
+          <input type="text" />
+        </div>
+        <div class="half13">
+          <div>Package</div>
+          <input type="text" />
+        </div>
+        <div class="half13">
+          <div>Delivery Company</div>
+          <input type="text" />
+        </div>
+        <div class="half13">
+          <div>Claim Picture</div>
+          <button class="btn btn-secondary">Choose</button>
+        </div>
+        <!-- <div style="justify-self: center"> -->
+        <button type="submit" class="btn btn-secondary w-100">Submit</button>
+        <!-- </div> -->
+      </div>
+      <div #right>
+        <div class="img-box"></div>
+      </div>
+    </div>
+  </form>
 </div>
