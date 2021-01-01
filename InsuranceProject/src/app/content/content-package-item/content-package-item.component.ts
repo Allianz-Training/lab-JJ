@@ -10,9 +10,6 @@ export class ContentPackageItemComponent implements OnInit {
   @Input()
   package: Package;
 
-  @Input()
-  packID: number;
-
   linkToDetail: string;
   constructor() {
     if (this.package == null) {
@@ -21,12 +18,13 @@ export class ContentPackageItemComponent implements OnInit {
         'Unknown Package',
         ['a', 'b', 'c'],
         '120',
+        10000,
         1000
       );
     }
   }
 
   ngOnInit() {
-    this.linkToDetail = '/package/' + this.packID.toString();
+    this.linkToDetail = '/package/' + this.package.id.toString();
   }
 }

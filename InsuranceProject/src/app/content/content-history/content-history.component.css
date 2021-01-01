@@ -13,3 +13,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+
+.auto-divide {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px;
+}

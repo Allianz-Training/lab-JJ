@@ -4,8 +4,8 @@
   background-color: rgb(190, 190, 190);
   border-radius: 15px;
   padding: 20px;
-  margin: 20px;
-  min-height: 67vh;
+  margin: 10px;
+  min-height: 70vh;
   grid-gap: 10px;
 }
 .half {
@@ -37,13 +37,10 @@
 
 .right-content {
   width: 100%;
-  align-self: center;
+  /* align-self: center; */
 }
-
-@media only screen and (max-width: 600px) {
-  .half {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
+.package-content {
+  font-size: 20px;
+  text-align: end;
+  margin-bottom: 10px;
 }
