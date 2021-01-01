@@ -3,12 +3,17 @@
 </div>
 <div class="package-item">
   <div class="half">
-    <h1 class="m-0">Package Name</h1>
-    <div class="ml-auto mr-2">Cost : xxx</div>
+    <h1 class="m-0">Package Name : {{ package.name }}</h1>
+    <div class="ml-auto mr-2">Cost : {{ package.price }}</div>
   </div>
   <div class="half half-space">
     <div class="detail-container">Package Description</div>
-    <div class="detail-container">Package Benefit</div>
+    <div class="detail-container">
+      <div>Package Benefit</div>
+      <ul class="m-0 pl-3">
+        <li *ngFor="let b of package.benefits">{{ b }}</li>
+      </ul>
+    </div>
   </div>
   <div class="half half-space">
     <div class="btn btn-secondary w-50" [routerLink]="['/packages']">Back</div>
