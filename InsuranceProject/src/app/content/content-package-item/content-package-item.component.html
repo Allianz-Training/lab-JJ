@@ -1,15 +1,9 @@
 <div class="package-item">
-  <div class="package-head">Package</div>
-  <div>Price : xxx</div>
+  <div class="package-head">{{ package.name }}</div>
+  <div>Price : {{ package.price }}</div>
   <hr />
   <ul style="font-size: 12px">
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-    <li>D</li>
-    <li>E</li>
-    <li>F</li>
-    <li>G</li>
+    <li *ngFor="let b of package.benefits">{{ b }}</li>
   </ul>
   <div class="btn btn-secondary" [routerLink]="[linkToDetail]">Choose</div>
 </div>
