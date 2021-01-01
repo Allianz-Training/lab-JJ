@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ImageService } from 'src/app/image.service';
 import { PageControllerService } from 'src/app/page-controller.service';
 
 @Component({
@@ -13,9 +12,15 @@ export class ContentClaimFormComponent implements OnInit {
   myForm: FormGroup;
   constructor(
     private pageService: PageControllerService,
-    private imgService: ImageService
+    private fb: FormBuilder
   ) {
-    // this.form = this.fb.group({ tracking: ['', Validators.required] });
+    this.myForm = this.fb.group({
+      name: [''],
+      tracking: ['', Validators.required],
+      package: [''],
+      company: [''],
+      avatar: [null],
+    });
   }
 
   ngOnInit(): void {

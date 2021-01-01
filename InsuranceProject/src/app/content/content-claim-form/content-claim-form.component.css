@@ -19,9 +19,14 @@
 }
 
 .img-box {
-  background-color: black;
+  /* background-color: black; */
   border-radius: 15px;
   width: 90%;
   height: 100%;
-  margin: auto;
+}
+
+.imagePreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,33 +1,27 @@
 <div>
   <app-head-image [headTitle]="'Claim Form'"></app-head-image>
-  <form>
-    <!-- [formGroup]="myForm" -->
+  <form [formGroup]="myForm">
     <div class="half box-border">
       <div class="space" #left>
         <div class="half13">
           <div>Name</div>
-          <input type="text" />
+          <input type="text" formControlName="name" />
         </div>
         <div class="half13">
           <div>Tracking Number</div>
-          <input type="text" />
+          <input type="text" formControlName="tracking" />
         </div>
         <div class="half13">
           <div>Package</div>
-          <input type="text" />
+          <input type="text" formControlName="package" />
         </div>
         <div class="half13">
           <div>Delivery Company</div>
-          <input type="text" />
+          <input type="text" formControlName="company" />
         </div>
         <div class="half13">
           <div>Claim Picture</div>
-          <input
-            type="file"
-            accept="image/*"
-            (change)="showPreview($event)"
-            #imageInput
-          />
+          <input type="file" accept="image/*" (change)="showPreview($event)" />
         </div>
         <!-- <div style="justify-self: center"> -->
         <button type="submit" class="btn btn-secondary w-100">Submit</button>
@@ -36,7 +30,7 @@
       <div #right>
         <div class="img-box">
           <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-            <img [src]="imageURL" [alt]="form.value.name" />
+            <img [src]="imageURL" [alt]="form.value.name" width="300" />
           </div>
         </div>
       </div>

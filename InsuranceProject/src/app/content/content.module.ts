@@ -14,7 +14,7 @@ import { ContentPackageItemComponent } from './content-package-item/content-pack
 import { TopicComponent } from './content-qa/topic/topic.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ContentPaymentComponent } from './content-payment/content-payment.component';
-import { ImageService } from '../image.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,8 +31,14 @@ import { ImageService } from '../image.service';
     TopicComponent,
     ContentPaymentComponent,
   ],
-  imports: [CommonModule, NavModule, AppRoutingModule],
-  providers: [ImageService],
+  imports: [
+    CommonModule,
+    NavModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [],
   exports: [ContentPackageComponent],
 })
 export class ContentModule {}

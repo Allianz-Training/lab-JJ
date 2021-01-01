@@ -11,12 +11,4 @@ export class AppComponent {
   title = 'InsuranceProject';
 
   constructor(public pageService: PageControllerService) {}
-
-  prepareRoute(outlet: RouterOutlet) {
-    return (
-      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
-    );
-  }
-
-  showLogin() {}
 }
