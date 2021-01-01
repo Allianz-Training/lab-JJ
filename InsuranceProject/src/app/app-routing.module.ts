@@ -18,49 +18,41 @@ const routes: Routes = [
   {
     path: 'home',
     component: ContentHomeComponent,
-    data: { animation: 'HomePage' },
     //0
   },
   {
     path: 'packages',
     component: ContentPackageComponent,
-    data: { animation: 'PackagesPage' },
     //1
   },
   {
     path: 'package/:id',
     component: ContentPackageDetailComponent,
-    data: { animation: 'PackageDetailPage' },
     //11
   },
   {
     path: 'package/:id/payment',
     component: ContentPaymentComponent,
-    data: { animation: 'PaymentPage' },
     //11p
   },
   {
     path: 'qa',
     component: ContentQaComponent,
-    data: { animation: 'QaPage' },
     //2
   },
   {
     path: 'contact',
     component: ContentContactUsComponent,
-    data: { animation: 'ContactPage' },
     //3
   },
   {
     path: 'history',
     component: ContentHistoryComponent,
-    data: { animation: 'HistoryPage' },
     //4
   },
   {
     path: 'claim',
     component: ContentClaimFormComponent,
-    data: { animation: 'ClaimPage' },
     //5
   },
 ];
