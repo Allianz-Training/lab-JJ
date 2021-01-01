@@ -1,8 +1,8 @@
 <div>
   <app-head-image [headTitle]="'Claim Form'"></app-head-image>
   <form [formGroup]="myForm">
-    <div class="half box-border">
-      <div class="space" #left>
+    <div class="half box-border mb-5">
+      <div class="space" id="left">
         <div class="half13">
           <div>Name</div>
           <input type="text" formControlName="name" />
@@ -19,18 +19,28 @@
           <div>Delivery Company</div>
           <input type="text" formControlName="company" />
         </div>
-        <div class="half13">
+        <div class="halfPic">
           <div>Claim Picture</div>
           <input type="file" accept="image/*" (change)="showPreview($event)" />
         </div>
         <!-- <div style="justify-self: center"> -->
-        <button type="submit" class="btn btn-secondary w-100">Submit</button>
+        <button
+          type="submit"
+          class="btn btn-secondary w-100"
+          [disabled]="!myForm.valid"
+        >
+          Submit
+        </button>
         <!-- </div> -->
       </div>
-      <div #right>
-        <div class="img-box">
-          <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-            <img [src]="imageURL" [alt]="form.value.name" width="300" />
+      <div class="img-box" #right>
+        <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+          <img [src]="imageURL" [alt]="form.value.name" width="300" />
+        </div>
+        <div class="imagePreview" *ngIf="!imageURL">
+          <img src="'../../../../../assets/images/none-icon.png" width="300" />
+          <div style="color: rgb(185, 185, 185)">
+            Could not found any image to upload
           </div>
         </div>
       </div>

@@ -11,6 +11,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  signUpClick() {
+    this.pageService.isLoginPage = false;
+    this.pageService.isSignUpPage = true;
+  }
   closeClick() {
     this.pageService.isLoginPage = false;
   }

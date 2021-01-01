@@ -15,10 +15,10 @@ export class ContentClaimFormComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.myForm = this.fb.group({
-      name: [''],
+      name: ['', Validators.required],
       tracking: ['', Validators.required],
-      package: [''],
-      company: [''],
+      package: ['', Validators.required],
+      company: ['', Validators.required],
       avatar: [null],
     });
   }
@@ -42,3 +42,5 @@ export class ContentClaimFormComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 }
+
+// If cannot show the preivew image : npm install @angular/cli -g

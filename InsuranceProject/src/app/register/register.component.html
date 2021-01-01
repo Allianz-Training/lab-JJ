@@ -6,25 +6,54 @@
         <i class="btn fas fa-times" (click)="closeClick()"></i>
       </div>
       <div class="form-container">
-        <form>
+        <form [formGroup]="form">
           <h1 class="text-center">Register</h1>
           <div>
-            <input type="text" class="form-control" placeholder="Name" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              formControlName="name"
+            />
           </div>
           <div>
-            <input type="text" class="form-control" placeholder="Citizen ID" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Citizen ID"
+              formControlName="cid"
+            />
           </div>
           <div>
-            <input type="text" class="form-control" placeholder="Email" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+            />
           </div>
           <div>
-            <input type="text" class="form-control" placeholder="Password" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+            />
           </div>
           <div>
-            <input type="text" class="form-control" placeholder="Tel" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Telephone Number"
+              formControlName="telephone"
+            />
           </div>
           <div class="row m-0">
-            <button type="submit" class="btn btn-secondary m-auto pl-5 pr-5">
+            <button
+              type="submit"
+              class="btn btn-secondary m-auto pl-5 pr-5"
+              [disabled]="!form.valid"
+            >
               Submit
             </button>
           </div>

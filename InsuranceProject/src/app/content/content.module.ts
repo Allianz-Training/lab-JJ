@@ -42,3 +42,5 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [ContentPackageComponent],
 })
 export class ContentModule {}
+
+// npm install @angular/cli -g
