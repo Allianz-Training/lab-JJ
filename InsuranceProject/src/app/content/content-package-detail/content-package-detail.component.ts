@@ -33,8 +33,4 @@ export class ContentPackageDetailComponent implements OnInit {
       this.package = this.pService.getPackageById(p['id']);
     });
   }
-
-  paymentClick() {
-    this.pService.setCurrentPackage(this.package);
-  }
 }

@@ -4,20 +4,34 @@
     <div class="half box-border mb-5">
       <div class="space" id="left">
         <div class="half13">
-          <div>Name</div>
-          <input type="text" formControlName="name" />
+          <div class="form-text">Name</div>
+          <input type="text" formControlName="name" class="form-control" />
         </div>
         <div class="half13">
-          <div>Tracking Number</div>
-          <input type="text" formControlName="tracking" />
+          <div class="form-text">Delivery Company</div>
+          <select class="form-control" id="company" formControlName="company">
+            <option value="1">Kerry</option>
+            <option value="2">J&T</option>
+            <option value="3">DHL</option>
+            <option value="4">Thai Post</option>
+          </select>
         </div>
         <div class="half13">
-          <div>Package</div>
-          <input type="text" formControlName="package" />
+          <div class="form-text">Tracking Number</div>
+          <input type="text" formControlName="tracking" class="form-control" />
         </div>
         <div class="half13">
-          <div>Delivery Company</div>
-          <input type="text" formControlName="company" />
+          <div class="form-text">Price</div>
+          <input type="text" formControlName="price" class="form-control" />
+        </div>
+        <div class="half13">
+          <div class="form-text">Package</div>
+          <select class="form-control" id="package" formControlName="package">
+            <option value="1">Valid Package(1)</option>
+            <option value="2">Valid Package(2)</option>
+            <option value="3" disabled>Invalid Package(3)</option>
+            <option value="4">Valid Package(4)</option>
+          </select>
         </div>
         <div class="halfPic">
           <div>Claim Picture</div>

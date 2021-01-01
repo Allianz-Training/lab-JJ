@@ -9,12 +9,14 @@ import { ContentClaimFormComponent } from './content-claim-form/content-claim-fo
 import { NavModule } from '../nav/nav.module';
 import { ContentHomeComponent } from './content-home/content-home.component';
 import { ContentPackageDetailComponent } from './content-package-detail/content-package-detail.component';
-import { ClaimItemComponent } from './content-claim-form/claim-item/claim-item.component';
+import { ClaimItemComponent } from './content-history/package-history/claim-item/claim-item.component';
 import { ContentPackageItemComponent } from './content-package-item/content-package-item.component';
 import { TopicComponent } from './content-qa/topic/topic.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ContentPaymentComponent } from './content-payment/content-payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PackageHistoryComponent } from './content-history/package-history/package-history.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContentPackageItemComponent,
     TopicComponent,
     ContentPaymentComponent,
+    PackageHistoryComponent,
   ],
   imports: [
     CommonModule,
@@ -37,10 +40,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   exports: [ContentPackageComponent],
 })
 export class ContentModule {}
-
-// npm install @angular/cli -g

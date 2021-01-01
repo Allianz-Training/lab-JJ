@@ -16,10 +16,11 @@ export class ContentClaimFormComponent implements OnInit {
   ) {
     this.myForm = this.fb.group({
       name: ['', Validators.required],
+      company: ['1', Validators.required],
       tracking: ['', Validators.required],
+      price: ['', Validators.required],
       package: ['', Validators.required],
-      company: ['', Validators.required],
-      avatar: [null],
+      productImage: [null],
     });
   }
 
@@ -30,9 +31,9 @@ export class ContentClaimFormComponent implements OnInit {
   showPreview(event) {
     const file = (event.target as HTMLInputElement).files[0];
     this.myForm.patchValue({
-      avatar: file,
+      productImage: file,
     });
-    this.myForm.get('avatar').updateValueAndValidity();
+    this.myForm.get('productImage').updateValueAndValidity();
 
     // File Preview
     const reader = new FileReader();
