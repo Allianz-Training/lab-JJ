@@ -2,9 +2,8 @@
   <app-head-image [headTitle]="'Q & A'"></app-head-image>
   <div class="question-container">
     <h1 class="mt-3"><b>Most User Question</b></h1>
-    <app-topic></app-topic>
-    <app-topic></app-topic>
-    <app-topic></app-topic>
-    <app-topic></app-topic>
+    <div *ngFor="let q of topics">
+      <app-topic [qa]="q"></app-topic>
+    </div>
   </div>
 </div>

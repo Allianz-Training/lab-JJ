@@ -29,22 +29,31 @@ export class RegisterComponent implements OnInit {
 
   submitClick() {
     this.http
-      .post('http://localhost:8080/user/addUser', {
-        name: this.form.get('firstName').value,
-        surname: this.form.get('lastName').value,
-        citizenId: this.form.get('cid').value,
-        email: this.form.get('email').value,
-        password: this.form.get('password').value,
-        tel: this.form.get('telephone').value,
-      })
+      .post(
+        'http://localhost:8080/user/addUser',
+        {
+          name: this.form.get('firstName').value,
+          surname: this.form.get('lastName').value,
+          citizenId: this.form.get('cid').value,
+          email: this.form.get('email').value,
+          password: this.form.get('password').value,
+          tel: this.form.get('telephone').value,
+        },
+        { responseType: 'text' } // add this because backend response string not json
+      )
       .subscribe((result) => {
         alert('Register Success!');
         this.form.reset();
         this.pageService.isSignUpPage = false;
+        (response) => {
+          alert('Success!');
+        };
         (error) => {
           alert('Something wents wrong!');
         };
       });
+    this.form.reset;
+    this.pageService.isSignUpPage = false;
   }
 
   closeClick() {
