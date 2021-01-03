@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { ContentClaimFormComponent } from './content-claim-form.component';
 
@@ -8,6 +10,7 @@ describe('ContentClaimFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[ReactiveFormsModule,FormsModule,RouterTestingModule],
       declarations: [ ContentClaimFormComponent ]
     })
     .compileComponents();

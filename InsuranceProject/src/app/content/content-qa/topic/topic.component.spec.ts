@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopicComponent } from './topic.component';
 
 describe('TopicComponent', () => {
+
   let component: TopicComponent;
   let fixture: ComponentFixture<TopicComponent>;
 
@@ -16,6 +17,8 @@ describe('TopicComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TopicComponent);
     component = fixture.componentInstance;
+    const qaMock = fixture.debugElement.componentInstance;
+    qaMock.qa=[{q:'question',a:'answer'}];
     fixture.detectChanges();
   });
 
