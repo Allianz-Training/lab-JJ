@@ -10,13 +10,19 @@
     <a [routerLink]="['home']"> Sample Logo </a>
   </div>
   <div class="top-user">
-    <div *ngIf="isMember == true" #member>
-      <button class="btn btn-secondary">
-        <i class="fas fa-user mr-2"></i>
-        Name
+    <div *ngIf="memberState() == true" #member>
+      <button
+        class="btn btn-secondary mr-2"
+        mat-button
+        [matMenuTriggerFor]="menu"
+      >
+        <i class="fas fa-user mr-2"></i> {{ pageService.user.name }}
       </button>
+      <mat-menu #menu="matMenu">
+        <button class="btn w-100" (click)="logOutClick()">Log Out</button>
+      </mat-menu>
     </div>
-    <div *ngIf="isMember == false" #notMember>
+    <div *ngIf="memberState() == false" #notMember>
       <button class="btn btn-secondary mr-2" (click)="signUpClick()">
         Sign up
       </button>

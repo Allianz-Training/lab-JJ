@@ -41,6 +41,7 @@ export class ContentClaimFormComponent implements OnInit {
       this.imageURL = reader.result as string;
     };
     reader.readAsDataURL(file);
+    console.log(file);
   }
 }
 

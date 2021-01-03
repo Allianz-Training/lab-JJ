@@ -18,8 +18,10 @@ export class PackageHistoryComponent implements OnInit {
     this.claims = [];
     // Test Get Method
     this.http
-      .get('https://jsonplaceholder.typicode.com/posts')
+      // .get('https://jsonplaceholder.typicode.com/users')
+      .get('http://localhost:8080/user/findAllUsers')
       .subscribe((result) => {
+        // console.log(result);
         this.claims = result as any[];
       });
   }

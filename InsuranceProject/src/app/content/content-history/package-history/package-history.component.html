@@ -10,9 +10,8 @@
   <hr />
   <div class="head">Claim Status</div>
   <div class="claim-set mb-5">
-    <app-claim-item
-      *ngFor="let claim of claims"
-      [claim]="claim"
-    ></app-claim-item>
+    <div *ngFor="let claim of claims; let i = index">
+      <app-claim-item [claim]="claim"></app-claim-item>
+    </div>
   </div>
 </div>

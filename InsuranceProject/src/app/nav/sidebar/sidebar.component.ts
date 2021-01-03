@@ -7,7 +7,11 @@ import { PageControllerService } from 'src/app/page-controller.service';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  constructor(public pService: PageControllerService) {}
+  constructor(private pService: PageControllerService) {}
 
   ngOnInit(): void {}
+
+  getCurrentPage(): number {
+    return this.pService.getPage();
+  }
 }

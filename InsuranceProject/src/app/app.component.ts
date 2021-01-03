@@ -10,5 +10,12 @@ import { PageControllerService } from './page-controller.service';
 export class AppComponent {
   title = 'InsuranceProject';
 
-  constructor(public pageService: PageControllerService) {}
+  constructor(private pageService: PageControllerService) {}
+
+  checkLogin(): boolean {
+    return this.pageService.isLoginPage;
+  }
+  checkSignUp(): boolean {
+    return this.pageService.isSignUpPage;
+  }
 }

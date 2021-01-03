@@ -7,14 +7,13 @@ import { PageControllerService } from 'src/app/page-controller.service';
   styleUrls: ['./topbar.component.css'],
 })
 export class TopbarComponent implements OnInit {
-  isMember: boolean;
-
-  constructor(private pageService: PageControllerService) {
-    this.isMember = this.pageService.isMember;
-  }
+  constructor(private pageService: PageControllerService) {}
 
   ngOnInit(): void {}
 
+  memberState(): boolean {
+    return this.pageService.isMember;
+  }
   loginClick() {
     this.pageService.isLoginPage
       ? (this.pageService.isLoginPage = false)
@@ -24,5 +23,10 @@ export class TopbarComponent implements OnInit {
     this.pageService.isSignUpPage
       ? (this.pageService.isSignUpPage = false)
       : (this.pageService.isSignUpPage = true);
+  }
+  logOutClick() {
+    this.pageService.isMember = false;
+    this.pageService.user = null;
+    alert('Logged out');
   }
 }

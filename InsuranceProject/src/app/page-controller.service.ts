@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Package } from './package';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,7 @@ export class PageControllerService {
   isSignUpPage: boolean;
   isSelectedPack: boolean;
   selectedPackage: Package;
+  user: User;
 
   constructor() {
     this.index = 0;
@@ -25,6 +27,7 @@ export class PageControllerService {
       new Package(2, 'Accessories', ['a', 'b', 'c'], '120', 5000, 500),
       new Package(3, 'Cosmetic', ['a', 'b', 'c', 'd'], '120', 7000, 700),
     ];
+    this.user = null;
   }
 
   setPage(idx: number) {

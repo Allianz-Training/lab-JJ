@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Package } from 'src/app/package';
 import { PageControllerService } from 'src/app/page-controller.service';
@@ -31,6 +31,7 @@ export class ContentPackageDetailComponent implements OnInit {
     this.package = null;
     this.route.params.subscribe((p) => {
       this.package = this.pService.getPackageById(p['id']);
+      // console.log(p);
     });
   }
 }

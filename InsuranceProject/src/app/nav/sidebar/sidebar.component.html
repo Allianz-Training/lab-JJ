@@ -2,35 +2,35 @@
   <div class="side-container">
     <div
       class="side-item"
-      [class.selected]="pService.getPage() == 1"
+      [class.selected]="getCurrentPage() == 1"
       [routerLink]="['/packages']"
     >
       Packages
     </div>
     <div
       class="side-item"
-      [class.selected]="pService.getPage() == 2"
+      [class.selected]="getCurrentPage() == 2"
       [routerLink]="['/qa']"
     >
       Q&A
     </div>
     <div
       class="side-item"
-      [class.selected]="pService.getPage() == 3"
+      [class.selected]="getCurrentPage() == 3"
       [routerLink]="['/contact']"
     >
       Contact Us
     </div>
     <div
       class="side-item"
-      [class.selected]="pService.getPage() == 4"
+      [class.selected]="getCurrentPage() == 4"
       [routerLink]="['/history']"
     >
       History
     </div>
     <div
       class="side-item"
-      [class.selected]="pService.getPage() == 5"
+      [class.selected]="getCurrentPage() == 5"
       [routerLink]="['/claim']"
     >
       Claim Form

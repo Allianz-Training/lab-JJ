@@ -10,25 +10,48 @@
       <div class="close-btn">
         <i class="btn fas fa-times" (click)="closeClick()"></i>
       </div>
-      <div class="right-content">
-        <div class="right-head">Welcome</div>
-        <div class="form-container mb-3">
-          <div class="form-divider mb-2">
-            <div class="col-form-label">Email</div>
-            <input class="form-control" type="text" />
+      <form [formGroup]="form">
+        <div class="right-content">
+          <div class="right-head">Welcome</div>
+          <div class="form-container mb-3">
+            <div class="form-divider mb-2">
+              <div class="col-form-label">Email</div>
+              <input
+                class="form-control"
+                type="text"
+                formControlName="email"
+                #emailInput
+              />
+            </div>
+            <div class="form-divider">
+              <div class="col-form-label">Password</div>
+              <input
+                class="form-control"
+                type="password"
+                formControlName="password"
+              />
+            </div>
           </div>
-          <div class="form-divider">
-            <div class="col-form-label">Password</div>
-            <input class="form-control" type="password" />
+          <div
+            style="
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: center;
+            "
+          >
+            <button
+              type="submit"
+              class="btn btn-secondary w-50 ml-1"
+              (click)="loginClick()"
+            >
+              Login
+            </button>
+            <button class="btn btn-secondary w-50 mr-1" (click)="signUpClick()">
+              Sign up
+            </button>
           </div>
         </div>
-        <div class="half-divider">
-          <button class="btn btn-secondary mr-1" (click)="signUpClick()">
-            Sign up
-          </button>
-          <button class="btn btn-secondary ml-1">Login</button>
-        </div>
-      </div>
+      </form>
       <div></div>
     </div>
   </div>
