@@ -6,8 +6,17 @@
 />
 
 <header class="top-background">
-  <div class="top-logo">
-    <a [routerLink]="['home']"> Sample Logo </a>
+  <div class="top-logo row" style="width: fit-content" [routerLink]="['home']">
+    <div>
+      <img
+        src="../../../assets/images/gms-icon.png"
+        width="40px"
+        style="background-color: white; border-radius: 5px"
+      />
+    </div>
+    <a style="display: flex; align-self: center; margin-left: 10px"
+      >INSURANCE</a
+    >
   </div>
   <div class="top-user">
     <div *ngIf="memberState() == true" #member>
@@ -23,10 +32,12 @@
       </mat-menu>
     </div>
     <div *ngIf="memberState() == false" #notMember>
-      <button class="btn btn-secondary mr-2" (click)="signUpClick()">
+      <button class="btn btn-secondary my-btn mr-2" (click)="signUpClick()">
         Sign up
       </button>
-      <button class="btn btn-secondary" (click)="loginClick()">Login</button>
+      <button class="btn btn-secondary my-btn" (click)="loginClick()">
+        Login
+      </button>
     </div>
   </div>
 </header>

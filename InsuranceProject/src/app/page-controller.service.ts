@@ -23,9 +23,48 @@ export class PageControllerService {
     this.isSelectedPack = false;
     this.selectedPackage = null;
     this.packages = [
-      new Package(1, 'Clothes', ['a', 'b'], '120', 2000, 200),
-      new Package(2, 'Accessories', ['a', 'b', 'c'], '120', 5000, 500),
-      new Package(3, 'Cosmetic', ['a', 'b', 'c', 'd'], '120', 7000, 700),
+      new Package(
+        1,
+        'A',
+        [
+          'Product Lost',
+          'Product Damaged',
+          'Insurance Coverage Limit ( 10,000 )',
+          'Compensate 30% of your product price',
+        ],
+        '120',
+        10000,
+        5000,
+        'The company provided 10,000 baht of insurance coverage limit for the product claim. The claim that we include are product lost and product damaged. The company will pay 30% of your product.'
+      ),
+      new Package(
+        2,
+        'B',
+        [
+          'Product Lost',
+          'Product Damaged',
+          'Insurance Coverage Limit ( 15,000 )',
+          'Compensate 40% of your product price',
+        ],
+        '120',
+        15000,
+        7000,
+        'The company provided 15,000 baht of insurance coverage limit for the product claim. The claim that we include are product lost and product damaged. The company will pay 40% of your product.'
+      ),
+      new Package(
+        3,
+        'C',
+        [
+          'Product Lost',
+          'Product Damaged',
+          'Insurance Coverage Limit ( 30,000 )',
+          'Compensate 100% of your product price',
+        ],
+        '120',
+        30000,
+        15000,
+        'The company provided 30,000 baht of insurance coverage limit for the product claim. The claim that we include are product lost and product damaged. The company will pay 100% of your product.'
+      ),
     ];
     this.user = null;
   }

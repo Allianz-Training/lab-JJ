@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PageControllerService } from 'src/app/page-controller.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class ContentClaimFormComponent implements OnInit {
   myForm: FormGroup;
   constructor(
     private pageService: PageControllerService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
     this.myForm = this.fb.group({
       name: ['', Validators.required],
@@ -25,6 +27,10 @@ export class ContentClaimFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.pageService.isMember) {
+      alert('Please login firstly');
+      this.router.navigate(['/home']);
+    }
     this.pageService.setPage(5);
   }
 

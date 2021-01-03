@@ -1,10 +1,13 @@
 <div class="package">
   <div class="auto-divide">
-    <div class="head">Package : A</div>
+    <div class="head">Package : {{ package.name }}</div>
     <div style="font-size: 20px">(Amount : $10,000/$20,000)</div>
   </div>
   <div class="package-detail">
-    Detail: ......................................
+    <b>Detail : </b>
+    <span class="mr-2" *ngFor="let b of package.benefits; let i = index"
+      >{{ b }}<span *ngIf="i != package.benefits.length - 1">,</span></span
+    >
   </div>
   <div class="mt-2" style="font-weight: 500">Expired Date: 12 Dec 2021</div>
   <hr />

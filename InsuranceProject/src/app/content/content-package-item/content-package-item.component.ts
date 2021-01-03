@@ -19,7 +19,8 @@ export class ContentPackageItemComponent implements OnInit {
         ['a', 'b', 'c'],
         '120',
         10000,
-        1000
+        1000,
+        'unknown description'
       );
     }
   }

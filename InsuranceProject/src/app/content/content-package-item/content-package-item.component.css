@@ -10,13 +10,15 @@ ul {
 
 .package-item {
   display: grid;
-  grid-template-rows: 20px 20px auto 1fr auto;
-  background-color: rgb(190, 190, 190);
+  grid-template-rows: 100px 20px auto 1fr auto;
+  background-color: rgb(182, 210, 252);
   border-radius: 15px;
   padding: 20px;
   height: 100%;
 }
 
 .package-head {
+  font-size: 100px;
+  margin: auto;
   font-weight: 700;
 }
