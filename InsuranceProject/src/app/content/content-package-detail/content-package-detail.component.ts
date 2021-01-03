@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { Package } from 'src/app/package';
 import { PageControllerService } from 'src/app/page-controller.service';
 
@@ -12,15 +11,10 @@ import { PageControllerService } from 'src/app/page-controller.service';
 export class ContentPackageDetailComponent implements OnInit {
   package: Package;
 
-
   constructor(
     private pService: PageControllerService,
     private route: ActivatedRoute
   ) {
-    this.route.params.subscribe((p) => {
-      this.package = this.pService.getPackageById(p['id']);
-      console.log('package: '+ p['id'])
-    });
     if (this.package == null) {
       this.package = new Package(
         99,
@@ -28,18 +22,21 @@ export class ContentPackageDetailComponent implements OnInit {
         ['a', 'b', 'c'],
         '120',
         10000,
-        1000
+        1000,
+        'unknown description'
       );
     }
   }
 
+  checkMember(): boolean {
+    return this.pService.isMember;
+  }
+
   ngOnInit(): void {
     this.package = null;
-    console.log(this.route.params);
-    console.log(this.pService);
     this.route.params.subscribe((p) => {
       this.package = this.pService.getPackageById(p['id']);
-    
+      // console.log(p);
     });
   }
 }

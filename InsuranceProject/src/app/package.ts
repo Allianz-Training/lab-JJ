@@ -5,6 +5,7 @@ export class Package {
   duration: string;
   insuranceAmount: number;
   price: number;
+  description: string;
 
   constructor(
     id: number,
@@ -12,7 +13,8 @@ export class Package {
     benefits: string[],
     duration: string,
     insuranceAmount: number,
-    price: number
+    price: number,
+    description: string
   ) {
     this.id = id;
     this.name = name;
@@ -20,5 +22,6 @@ export class Package {
     this.duration = duration;
     this.insuranceAmount = insuranceAmount;
     this.price = price;
+    this.description = description;
   }
 }

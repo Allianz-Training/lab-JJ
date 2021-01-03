@@ -23,6 +23,7 @@
     </div>
     <div
       class="side-item"
+      *ngIf="checkMember()"
       [class.selected]="getCurrentPage() == 4"
       [routerLink]="['/history']"
     >
@@ -30,6 +31,7 @@
     </div>
     <div
       class="side-item"
+      *ngIf="checkMember()"
       [class.selected]="getCurrentPage() == 5"
       [routerLink]="['/claim']"
     >

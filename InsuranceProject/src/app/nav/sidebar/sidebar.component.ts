@@ -14,4 +14,8 @@ export class SidebarComponent implements OnInit {
   getCurrentPage(): number {
     return this.pService.getPage();
   }
+
+  checkMember(): boolean {
+    return this.pService.isMember;
+  }
 }
